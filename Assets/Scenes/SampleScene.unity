@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 204706391}
   - component: {fileID: 204706392}
   - component: {fileID: 204706393}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 1.85}
+  m_Size: {x: 1.05, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -358,7 +358,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.6818182, y: 0.5}
     oldSize: {x: 1.1, y: 1.85}
-    newSize: {x: 1.3, y: 1.85}
+    newSize: {x: 1.05, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -393,6 +393,8 @@ MonoBehaviour:
   climbSpeed: 20
   raycastLength: 0
   climbHeight: 1
+  climbLength: 1
+  headOffset: 1
 --- !u!114 &204706393
 MonoBehaviour:
   m_ObjectHideFlags: 0

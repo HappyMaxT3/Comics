@@ -1,4 +1,3 @@
-using Main;
 using UnityEngine;
 
 namespace Main

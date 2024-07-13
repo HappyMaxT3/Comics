@@ -13,11 +13,13 @@ namespace Main
         private Animator _animator;
         private bool _isSliding;
         private bool _onWall;
+        private Ground ground;
 
         private void Awake()
         {
             _body = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+            ground = GetComponent<Ground>();
         }
 
         private void Update()
@@ -36,7 +38,7 @@ namespace Main
 
         private void HandleWallSlide()
         {
-            if (_onWall && !IsGrounded())
+            if (_onWall && !ground.OnGround)
             {
                 _isSliding = true;
                 _animator.SetBool("isSliding", true);
@@ -47,12 +49,6 @@ namespace Main
                 _isSliding = false;
                 _animator.SetBool("isSliding", false);
             }
-        }
-
-        private bool IsGrounded()
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, _raycastLength, LayerMask.GetMask("Default"));
-            return hit.collider != null;
         }
     }
 }
