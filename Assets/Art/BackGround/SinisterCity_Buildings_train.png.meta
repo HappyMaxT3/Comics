@@ -1,0 +1,449 @@
+fileFormatVersion: 2
+guid: 20b4fa5fe78216a4d8b0e64431b960bc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2240
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4504a5c93bf354c8d155e259664b08
+      internalID: 5855789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 2240
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63665f7e043bf694baededc3eefbc82e
+      internalID: 1811406727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_4
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 2240
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9934b8d4ab854b349af047213e64e0d3
+      internalID: 800627953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_6
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 2240
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb11a1268ee61c4c8ff9b212f0f1a9e
+      internalID: -1176921453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_8
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 2240
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52051d528e9577c4aa0ae496de8fd9ef
+      internalID: 132740414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_10
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 2240
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82270c9c591e7c54c9a6b64771e27464
+      internalID: 903492406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_12
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 2240
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bbbf01891601d4fa1c4cb156dbc23f
+      internalID: 715191675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1872
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc889805601bce4b9ad68f3057a3cfa
+      internalID: -598837718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_16
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1872
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca0874b11d8d4f4788229daf9c3fc39
+      internalID: -21552911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_18
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 1872
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b2bc06dffc4f149bf785f0a123327a
+      internalID: -812358230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_20
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1872
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe6934ac5b9eb8469a19233bead6a09
+      internalID: 267296192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_22
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 1872
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a5a0409868de04cb65ac145d8907d7
+      internalID: 1066461037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_24
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1872
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8d1425d05d214428ae3c4aa5a2d7f4
+      internalID: 1762480732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SinisterCity_Buildings_train_26
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 1872
+        width: 320
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298bd9fbafa9eab4eb9e2e4a2adc9448
+      internalID: -518045004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SinisterCity_Buildings_train_0: 5855789
+      SinisterCity_Buildings_train_1: -44023608
+      SinisterCity_Buildings_train_10: 903492406
+      SinisterCity_Buildings_train_11: -544807328
+      SinisterCity_Buildings_train_12: 715191675
+      SinisterCity_Buildings_train_13: -706055565
+      SinisterCity_Buildings_train_14: -598837718
+      SinisterCity_Buildings_train_15: -1772293835
+      SinisterCity_Buildings_train_16: -21552911
+      SinisterCity_Buildings_train_17: 1582457466
+      SinisterCity_Buildings_train_18: -812358230
+      SinisterCity_Buildings_train_19: 49707941
+      SinisterCity_Buildings_train_2: 1811406727
+      SinisterCity_Buildings_train_20: 267296192
+      SinisterCity_Buildings_train_21: -2084441273
+      SinisterCity_Buildings_train_22: 1066461037
+      SinisterCity_Buildings_train_23: -2038493988
+      SinisterCity_Buildings_train_24: 1762480732
+      SinisterCity_Buildings_train_25: -49808979
+      SinisterCity_Buildings_train_26: -518045004
+      SinisterCity_Buildings_train_27: 1584773777
+      SinisterCity_Buildings_train_3: 543714254
+      SinisterCity_Buildings_train_4: 800627953
+      SinisterCity_Buildings_train_5: 1613382071
+      SinisterCity_Buildings_train_6: -1176921453
+      SinisterCity_Buildings_train_7: 471726175
+      SinisterCity_Buildings_train_8: 132740414
+      SinisterCity_Buildings_train_9: -740794144
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
