@@ -3,50 +3,71 @@ using UnityEngine;
 
 namespace Main
 {
-    //компонент, отвечающий за здоровье сущности
-    public class Health : MonoBehaviour, IDamageable, IHealable
+    public class Health : MonoBehaviour, IDamageable
     {
-        public event Action OnDeath; //событие, вызываемое при смерти
-        public event Action<int> OnDamageTaken; //событие, вызываемое при получении урона
-        public event Action<int> OnHealed; //событие, вызываемое при восстановлении здоровья
+        [SerializeField] private int _defaultMaxHealth;
+        public event Action OnDeath;
+        public event Action<int> OnDamageTaken;
 
-        [SerializeField] private int _maxHealth = 100;
-
-        private int _currentHealth;
-
-        public int CurrentHealth { get { return _currentHealth; } }
+        private int _maxHealth;
         public int MaxHealth { get { return _maxHealth; } }
 
-        private void Start()
+        private int _currentHealth;
+        public int CurrentHealth { get { return _currentHealth; } }
+
+        private float _hpMultiplier = 1f;
+        private Animator _animator;
+        private bool _isDead = false;
+
+        private void Awake()
         {
+            _animator = GetComponent<Animator>();
+            _maxHealth = _defaultMaxHealth;
             _currentHealth = _maxHealth;
         }
 
         public void TakeDamage(int amount)
         {
-            if (amount < 0) //нельзя нанести отрицательный урон
+            if (amount < 0)
                 throw new ArgumentOutOfRangeException($"Damage amount can't be negative!: {gameObject.name}");
 
-            _currentHealth -= amount;
-            _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth); //здоровье не может быть < 0
+            if (_isDead) return;
 
+            _currentHealth -= amount;
+            _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
+
+            OnDamageTaken?.Invoke(amount);
             if (_currentHealth == 0)
             {
                 OnDeath?.Invoke();
-            }
-            else
-            {
-                OnDamageTaken?.Invoke(amount);
+                if (_animator != null)
+                {
+                    _animator.SetBool("IsDead", true);
+                }
+                _isDead = true;
+                DisableCharacterFunctionality();
             }
         }
 
-        public void Heal(int amount)
+        public void SetMaxHPMultiplier(float multiplier)
         {
-            if (amount < 0) // нельзя захилить отрицательное кол-во хп
-                throw new ArgumentOutOfRangeException($"amount should be positive: {gameObject.name}");
-            _currentHealth += amount;
-            _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
-            OnHealed?.Invoke(amount);
+            if (_isDead) return;
+
+            _maxHealth = (int)(_defaultMaxHealth * multiplier);
+            _currentHealth = _maxHealth;
+            _hpMultiplier = multiplier;
+        }
+
+        private void DisableCharacterFunctionality()
+        {
+            var components = GetComponents<MonoBehaviour>();
+            foreach (var component in components)
+            {
+                if (component != this)
+                {
+                    component.enabled = false;
+                }
+            }
         }
     }
 }

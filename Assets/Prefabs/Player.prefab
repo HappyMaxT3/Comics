@@ -51,7 +51,6 @@ GameObject:
   - component: {fileID: 504169497572208014}
   - component: {fileID: 2734861038964381961}
   - component: {fileID: 9141311697396889670}
-  - component: {fileID: 6695524184155312640}
   - component: {fileID: 8712266511654536104}
   m_Layer: 3
   m_Name: Player
@@ -321,19 +320,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slideSpeed: 4
   _raycastLength: 0.223
---- !u!114 &6695524184155312640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2391335842491768842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a97202044d5bb2a49bdd1c91f8f81f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 100
 --- !u!114 &8712266511654536104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +336,7 @@ MonoBehaviour:
   attackDamage: 5
   attackRange: 0.7
   attackSpeed: 1
+  _attackAnimationClip: {fileID: 0}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64

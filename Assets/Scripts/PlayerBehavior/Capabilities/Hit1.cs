@@ -11,6 +11,7 @@ namespace Main
         [SerializeField] public int attackDamage;
         [SerializeField] public float attackRange;
         [SerializeField] public float attackSpeed;
+        [SerializeField] private AnimationClip _attackAnimationClip;
 
         public LayerMask enemyLayers;
 
@@ -19,6 +20,7 @@ namespace Main
         private void Awake()
         {
             animator = GetComponent<Animator>();
+
         }
 
         private void Update()
@@ -39,8 +41,13 @@ namespace Main
         {
             if (animator != null)
             {
-                animator.SetTrigger("IsAttacking");
+                animator.SetBool("IsAttacking", true);
+
+                Invoke(nameof(EndAttack), GetAttackAnimationDuration());
+
             }
+
+
 
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(hitPoint.position, attackRange, enemyLayers);
 
@@ -48,8 +55,25 @@ namespace Main
             {
                 Debug.Log("Hit to " + enemy.name);
 
-                enemy.GetComponent<Gunfighter>().TakeDamage(attackDamage);
+                var Damagable = enemy.GetComponent<IDamageable>();
+
+                if( Damagable != null )
+                {
+                    Damagable.TakeDamage(attackDamage);
+                }
+
+                
             }
+        }
+
+        private void EndAttack()
+        {
+            animator.SetBool("IsAttacking", false );
+        }
+
+        public float GetAttackAnimationDuration()
+        {
+            return _attackAnimationClip.length;
         }
 
 
