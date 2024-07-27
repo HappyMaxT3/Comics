@@ -17,6 +17,8 @@ namespace Main
         protected Fsm _fsm;
         protected Vector2 _forwardVector;
 
+        public Vector2 ForwardVector => _forwardVector;
+
         protected virtual void OnEnable()
         {
             _health.OnDamageTaken += HandleHit;

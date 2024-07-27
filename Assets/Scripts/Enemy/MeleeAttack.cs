@@ -16,7 +16,7 @@ namespace Main
         {
             if (IsAttacking) return;
 
-            base.BeginAttack(); // вызываем метод BeginAttack() у родительского класса
+            base.BeginAttack();
             _animator.SetBool("IsAttacking", true);
         }
 

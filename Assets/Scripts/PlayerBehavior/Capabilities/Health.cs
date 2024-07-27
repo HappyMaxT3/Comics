@@ -18,12 +18,17 @@ namespace Main
         private float _hpMultiplier = 1f;
         private Animator _animator;
         private bool _isDead = false;
+        private bool _isPlayer = false;
+
+        private DeathScreenManager _deathScreenManager;
 
         private void Awake()
         {
             _animator = GetComponent<Animator>();
             _maxHealth = _defaultMaxHealth;
             _currentHealth = _maxHealth;
+            _isPlayer = gameObject.CompareTag("Player");
+            _deathScreenManager = FindObjectOfType<DeathScreenManager>();
         }
 
         public void TakeDamage(int amount)
@@ -46,6 +51,7 @@ namespace Main
                 }
                 _isDead = true;
                 DisableCharacterFunctionality();
+                HandleDeath();
             }
         }
 
@@ -67,6 +73,14 @@ namespace Main
                 {
                     component.enabled = false;
                 }
+            }
+        }
+
+        private void HandleDeath()
+        {
+            if (_isPlayer && _deathScreenManager != null)
+            {
+                _deathScreenManager.ShowDeathScreen();
             }
         }
     }
