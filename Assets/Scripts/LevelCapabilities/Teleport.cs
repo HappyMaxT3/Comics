@@ -1,14 +1,16 @@
 using UnityEngine;
-using UnityEngine.UI; // Импортируем для работы с UI
+using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Main
 {
     public class Teleport : MonoBehaviour
     {
         public GameObject portal;
-        public Image screenFader; // Ссылка на UI-элемент для затемнения экрана
-        public float fadeDuration = 0.5f; // Длительность эффекта затемнения
+        public Image fadeScreen; // Ссылка на затемняющий экран
+        public float fadeDuration; // Время затемнения и восстановления
+        public List<GameObject> enemies; // Список врагов
 
         private GameObject player;
         private Rigidbody2D playerRigidbody;
@@ -17,23 +19,43 @@ namespace Main
         {
             player = GameObject.FindWithTag("Player");
             playerRigidbody = player.GetComponent<Rigidbody2D>();
+
+            if (fadeScreen != null)
+            {
+                Color color = fadeScreen.color;
+                color.a = 0f;
+                fadeScreen.color = color;
+            }
+            else
+            {
+                Debug.LogError("FadeScreen Image is not assigned in the inspector.");
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Player"))
             {
-                StartCoroutine(TeleportAndFade());
+                if (AreAllEnemiesDead())
+                {
+                    StartCoroutine(TeleportAndFade());
+                }
+                else
+                {
+                    Debug.Log("Not all enemies are dead.");
+                }
             }
         }
 
         private IEnumerator TeleportAndFade()
         {
-            // Начинаем анимацию затемнения
-            yield return StartCoroutine(FadeScreen(1f)); // Затемняем экран
+            if (fadeScreen != null)
+            {
+                // Затемнение экрана
+                yield return StartCoroutine(FadeScreen(1f));
+            }
 
             Vector3 teleportPosition = portal.transform.position;
-            Vector3 prevPosition = player.transform.position;
 
             if (playerRigidbody.velocity.x > 0)
             {
@@ -46,23 +68,39 @@ namespace Main
 
             player.transform.position = teleportPosition;
 
-            yield return StartCoroutine(FadeScreen(0f));
+            if (fadeScreen != null)
+            {
+                yield return StartCoroutine(FadeScreen(0f));
+            }
         }
 
         private IEnumerator FadeScreen(float targetAlpha)
         {
-            Color startColor = screenFader.color;
+            Color startColor = fadeScreen.color;
             Color endColor = new Color(startColor.r, startColor.g, startColor.b, targetAlpha);
             float elapsedTime = 0f;
 
             while (elapsedTime < fadeDuration)
             {
                 elapsedTime += Time.deltaTime;
-                screenFader.color = Color.Lerp(startColor, endColor, elapsedTime / fadeDuration);
+                fadeScreen.color = Color.Lerp(startColor, endColor, elapsedTime / fadeDuration);
                 yield return null;
             }
 
-            screenFader.color = endColor;
+            fadeScreen.color = endColor;
+        }
+
+        private bool AreAllEnemiesDead()
+        {
+            foreach (var enemy in enemies)
+            {
+                var health = enemy.GetComponent<Health>();
+                if (health != null && health.CurrentHealth > 0)
+                {
+                    return false; // Один из врагов жив
+                }
+            }
+            return true; // Все враги мертвы
         }
     }
 }

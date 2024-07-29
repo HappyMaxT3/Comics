@@ -6,6 +6,7 @@ namespace Main
     {
         [SerializeField] private float rollingDuration = 0.5f;
         [SerializeField] private float rollingDistance = 2f;
+        [SerializeField] private LayerMask enemyLayer; // Слой врагов
 
         private Vector2 rollingStart;
         private Vector2 rollingEnd;
@@ -15,12 +16,14 @@ namespace Main
         private Animator animator;
         private Rigidbody2D rb;
         private Ground ground;
+        private Collider2D playerCollider;
 
         void Start()
         {
             animator = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
             ground = GetComponent<Ground>();
+            playerCollider = GetComponent<Collider2D>();
         }
 
         void Update()
@@ -45,6 +48,9 @@ namespace Main
                 animator.SetBool("IsRolling", true);
             }
 
+            // Игнорируем столкновения с врагами
+            IgnoreCollisions(true);
+
             rollingStart = transform.position;
             rollingEnd = transform.localScale.x > 0 ? new Vector2(transform.position.x + rollingDistance, transform.position.y) : new Vector2(transform.position.x - rollingDistance, transform.position.y);
             rollingTimeElapsed = 0;
@@ -68,6 +74,26 @@ namespace Main
         {
             isRolling = false;
             animator.SetBool("IsRolling", false);
+
+            // Восстанавливаем столкновения с врагами
+            IgnoreCollisions(false);
+        }
+
+        private void IgnoreCollisions(bool ignore)
+        {
+            // Находим все коллайдеры, которые нужно игнорировать
+            Collider2D[] enemyColliders = Physics2D.OverlapCircleAll(transform.position, 10f, enemyLayer);
+            foreach (Collider2D enemyCollider in enemyColliders)
+            {
+                if (ignore)
+                {
+                    Physics2D.IgnoreCollision(playerCollider, enemyCollider, true);
+                }
+                else
+                {
+                    Physics2D.IgnoreCollision(playerCollider, enemyCollider, false);
+                }
+            }
         }
     }
 }

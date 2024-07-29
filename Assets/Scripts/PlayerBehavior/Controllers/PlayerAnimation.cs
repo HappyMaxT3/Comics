@@ -24,7 +24,7 @@ namespace Main
             _inputX = _controller.input.RetrieveMoveInput();
             if (_inputX != 0)
             {
-                transform.localScale = new Vector2(Mathf.Sign(_inputX), transform.localScale.y);
+                transform.localScale = new Vector3(Mathf.Sign(_inputX), transform.localScale.y, transform.localScale.z);
             }
 
             _animator.SetFloat("VelocityX", Mathf.Abs(_body.velocity.x));

@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 8460707154566764210}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -659,7 +659,7 @@ MonoBehaviour:
   _jumpSound: {fileID: 8300000, guid: 7f9ad547000fecf45a238f59cb5991b3, type: 3}
   _attackSound: {fileID: 8300000, guid: 7df6cb4a2e8eda34baff6371afd76194, type: 3}
   _hurtSound: {fileID: 8300000, guid: 8a4316c69ade120419c3df1576a1926c, type: 3}
-  _runSound: {fileID: 8300000, guid: 5939f8f341bda2242b758e84a0421a7f, type: 3}
+  _runSound: {fileID: 8300000, guid: c3edf9f493dadf34d9778e50d9476dff, type: 3}
   _deathSound: {fileID: 8300000, guid: 8a4316c69ade120419c3df1576a1926c, type: 3}
   _rollSound: {fileID: 8300000, guid: 7f9ad547000fecf45a238f59cb5991b3, type: 3}
   _climbSound: {fileID: 8300000, guid: 7f9ad547000fecf45a238f59cb5991b3, type: 3}

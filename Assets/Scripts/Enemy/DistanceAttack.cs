@@ -115,6 +115,7 @@ namespace BHSCamp
             // Создать снаряд, если игрок находится в зоне
             if (_player != null)
             {
+                Debug.Log(_player);
                 Vector3 toTarget = (_player.position - transform.position).normalized;
                 toTarget.y = 0; // Стрелять только по оси X
                 Projectile projectile = Instantiate(

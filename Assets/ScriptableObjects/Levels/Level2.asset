@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f057e06ffee259b47a6e7149d6d64cdf, type: 3}
   m_Name: Level2
   m_EditorClassIdentifier: 
-  Description: continue
-  Name: Chapter 2
+  Description: Where are all the cops? On a lunch break? It looks like something
+    happened that kept the cops from responding to the bank robbery. I should check
+    it out...
+  Name: Chapter 2. Sinister City Police Department
   SceneIndex: 2
   IsAccessible: 0

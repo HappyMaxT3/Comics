@@ -28,19 +28,19 @@ namespace BHSCamp
 
         private void Update()
         {
-            //just started running
-            if (false == _isRunngin && _ground.OnGround && 0 != _inputX)
-            {
-                _isRunngin = true;
-                _audioSource.clip = _runSound;
-                _audioSource.Play(0);
-            }
-            //finish running or jump
-            if (_isRunngin && (false == _ground.OnGround || 0 == _inputX))
-            {
-                _isRunngin = false;
-                _audioSource.Stop();
-            }
+            ////just started running
+            //if (false == _isRunngin && _ground.OnGround && 0 != _inputX)
+            //{
+            //    _isRunngin = true;
+            //    _audioSource.clip = _runSound;
+            //    _audioSource.Play(0);
+            //}
+            ////finish running or jump
+            //if (_isRunngin && (false == _ground.OnGround || 0 == _inputX))
+            //{
+            //    _isRunngin = false;
+            //    _audioSource.Stop();
+            //}
         }
 
         public void PlayJumpSound()
@@ -89,9 +89,9 @@ namespace BHSCamp
             }
         }
 
-        public void SetInputX(float inputX)
+        public void PlayRunSound()
         {
-            _inputX = inputX;
+            _audioSource.PlayOneShot(_runSound);
         }
     }
 }

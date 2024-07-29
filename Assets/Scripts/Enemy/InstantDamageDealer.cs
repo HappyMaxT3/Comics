@@ -44,6 +44,7 @@ namespace Main
         private void ApplyKnockback(Rigidbody2D rb, Vector2 direction, float knockForce)
         {
             //ForceMode2D.Impulse - мгновенное применение силы
+
             rb.AddForce(direction * knockForce, ForceMode2D.Impulse);
         }
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5794131382502977946}
   - component: {fileID: 1123989242507651899}
   - component: {fileID: 6694248088260153740}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MeleeAttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2540066810419360476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 5033498860825312995}
   - component: {fileID: 2316652731523155144}
   - component: {fileID: 833137081913484855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 8587732125170092306}
   - component: {fileID: 1665052096371629591}
   - component: {fileID: 5328338771290320404}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 8770468990537393621}
   - component: {fileID: 4502819546197138056}
   - component: {fileID: 820104769858273462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Brawler1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7857175541696838694}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.975, y: -21.145, z: 0.07155779}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -370,7 +370,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 14236783f1b94864489854182bb407ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -629,7 +629,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -8636153300431262829, guid: e33e2e1fd21972843b4fb37b8223bc61, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.534
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -637,7 +637,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 3.2189026
   MaxDistance: 5
   Pan2D: 0
   rolloffMode: 0
@@ -742,7 +742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8367849581030863906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HatPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ Transform:
   m_GameObject: {fileID: 7924252362835126717}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.85, z: 0}
+  m_LocalPosition: {x: 0.08, y: 0.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 8966904878178884142}
   - component: {fileID: 970281744263913483}
   - component: {fileID: 8118892974999137972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}

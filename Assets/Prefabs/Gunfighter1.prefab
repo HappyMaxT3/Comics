@@ -206,8 +206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthComponent: {fileID: 8735756400782073206}
   _fillImage: {fileID: 1027553045063334142}
-  _fadeOutTime: 1.5
-  _fadeInTime: 0.2
+  _fadeOutTime: 2
+  _fadeInTime: 0.1
 --- !u!1 &5020875886171855477
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +304,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06322831, y: 0}
+  m_Offset: {x: 0.043462276, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -315,7 +315,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2549328, y: 1}
+  m_Size: {x: 1.0415516, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &3104591159173899324
 MonoBehaviour:
@@ -426,10 +426,10 @@ GameObject:
   - component: {fileID: 8735756400782073206}
   - component: {fileID: 7105793359410904852}
   - component: {fileID: 3403270725720784461}
-  - component: {fileID: 2108084397794597812}
   - component: {fileID: 5661502706745708030}
   - component: {fileID: 849677534276031056}
   - component: {fileID: 8329777745057854631}
+  - component: {fileID: 3146536758567392578}
   m_Layer: 6
   m_Name: Gunfighter1
   m_TagString: Untagged
@@ -445,7 +445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7941197730592782202}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.8, y: -20.81, z: 0.07155779}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -476,7 +476,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 14236783f1b94864489854182bb407ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97202044d5bb2a49bdd1c91f8f81f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultMaxHealth: 20
+  _defaultMaxHealth: 50
 --- !u!114 &7105793359410904852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,28 +689,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eca49fc564525343b073dccc74ca032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2108084397794597812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7941197730592782202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 701c6413eab146b4d8be09f7cdeca1d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _attackAnimationClip: {fileID: 7400000, guid: 412db068391510f4a87a87f1a3b7870c, type: 2}
-  _attackCD: 5
-  _projectilePrefab: {fileID: -6191591818946809681, guid: f49e41d3811a5514eb67b105099f9b4c, type: 3}
-  _projectileSpawnOffset: 1
-  _projectileParent: {fileID: 8823063444224404742}
-  _playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 8
-  _detectionBoxSize: {x: 7.5, y: 1}
-  _detectionDistance: 4.5
 --- !u!114 &5661502706745708030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,7 +717,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -8636153300431262829, guid: e33e2e1fd21972843b4fb37b8223bc61, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.539
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -843,3 +821,25 @@ MonoBehaviour:
   _rollSound: {fileID: 0}
   _climbSound: {fileID: 0}
   _slideSound: {fileID: 0}
+--- !u!114 &3146536758567392578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7941197730592782202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701c6413eab146b4d8be09f7cdeca1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackAnimationClip: {fileID: 7400000, guid: 412db068391510f4a87a87f1a3b7870c, type: 2}
+  _attackCD: 2
+  _projectilePrefab: {fileID: -6191591818946809681, guid: f49e41d3811a5514eb67b105099f9b4c, type: 3}
+  _projectileSpawnOffset: 1
+  _projectileParent: {fileID: 8823063444224404742}
+  _playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  _detectionBoxSize: {x: 7.5, y: 1}
+  _detectionDistance: 4.5

@@ -25,6 +25,7 @@ namespace Main
 
         public void Resume()
         {
+
             Debug.Log("Continue clicked");
             PauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
@@ -43,12 +44,6 @@ namespace Main
             Debug.Log("loaded menu");
             Time.timeScale = 1f;
             SceneManager.LoadScene("MainMenu");
-        }
-
-        public void QuitGame()
-        {
-            Debug.Log("quited");
-            Application.Quit();
         }
     }
 }

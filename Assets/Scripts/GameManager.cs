@@ -27,8 +27,22 @@ namespace Main
 
         public void FinishCurrentLevel()
         {
-            SceneManager.LoadScene("MainMenu"); 
-            OpenAccessToNextlevel();
+
+            print(_currentLevelIndex);
+            print(_levels[_currentLevelIndex].SceneIndex);
+
+            if (_currentLevelIndex + 1 == _levels.Length)
+            {
+
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
+                SceneManager.LoadScene(_levels[_currentLevelIndex + 1].SceneIndex);
+                OpenAccessToNextlevel();
+
+            }
+
         }
 
         private void OpenAccessToNextlevel()
