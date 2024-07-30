@@ -6449,16 +6449,8 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1252260130131715722, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2391335842491768842, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2391335842491768842, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4325065272080098551, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
@@ -6500,14 +6492,6 @@ PrefabInstance:
     - target: {fileID: 4325065272080098551, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8691690706249816140, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8712266511654536104, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: attackDamage
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
