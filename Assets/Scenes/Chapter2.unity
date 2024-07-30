@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 26866577}
   - component: {fileID: 26866579}
   - component: {fileID: 26866578}
+  - component: {fileID: 26866580}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -249,6 +250,7 @@ MonoBehaviour:
   - {fileID: 925338901}
   - {fileID: 1785686917}
   - {fileID: 6532165495679959568}
+  cooldownTime: 3
 --- !u!61 &26866579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -294,6 +296,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &26866580
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26866576}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &32377241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1317,7 @@ GameObject:
   - component: {fileID: 184635624}
   - component: {fileID: 184635626}
   - component: {fileID: 184635625}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5375,7 +5404,7 @@ GameObject:
   - component: {fileID: 424139255}
   - component: {fileID: 424139257}
   - component: {fileID: 424139256}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6049,7 +6078,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: -1150031242, guid: bffcba5470eb429409258fd1ea8dfe8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6614,6 +6643,7 @@ GameObject:
   - component: {fileID: 624461223}
   - component: {fileID: 624461222}
   - component: {fileID: 624461221}
+  - component: {fileID: 624461224}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -6639,6 +6669,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 130643917}
   - {fileID: 950614925}
+  cooldownTime: 3
 --- !u!61 &624461222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6699,6 +6730,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1536837331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &624461224
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624461220}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &624946458
 GameObject:
   m_ObjectHideFlags: 0
@@ -15163,7 +15221,7 @@ GameObject:
   - component: {fileID: 841263492}
   - component: {fileID: 841263494}
   - component: {fileID: 841263493}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 2Trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16595,7 +16653,7 @@ Transform:
   m_GameObject: {fileID: 1129044376}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.3, y: -2.61, z: 0}
+  m_LocalPosition: {x: -17.58, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16612,7 +16670,7 @@ GameObject:
   - component: {fileID: 1140611596}
   - component: {fileID: 1140611598}
   - component: {fileID: 1140611597}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 3Trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20207,6 +20265,7 @@ GameObject:
   - component: {fileID: 1571643584}
   - component: {fileID: 1571643586}
   - component: {fileID: 1571643585}
+  - component: {fileID: 1571643587}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -20248,6 +20307,7 @@ MonoBehaviour:
   - {fileID: 64535825}
   - {fileID: 626019394}
   - {fileID: 268008059}
+  cooldownTime: 3
 --- !u!61 &1571643586
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20293,6 +20353,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1571643587
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571643583}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1578215952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6002264201323055595, guid: 2efe71481927799489815a14d5d94534, type: 3}
@@ -20314,6 +20401,7 @@ GameObject:
   - component: {fileID: 1605390452}
   - component: {fileID: 1605390454}
   - component: {fileID: 1605390453}
+  - component: {fileID: 1605390455}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -20355,6 +20443,7 @@ MonoBehaviour:
   - {fileID: 64535825}
   - {fileID: 626019394}
   - {fileID: 268008059}
+  cooldownTime: 3
 --- !u!61 &1605390454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20400,6 +20489,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &1605390455
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605390451}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1609581890
 GameObject:
   m_ObjectHideFlags: 0
@@ -22291,7 +22407,7 @@ GameObject:
   - component: {fileID: 1852772283}
   - component: {fileID: 1852772285}
   - component: {fileID: 1852772284}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 1Trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22449,7 +22565,7 @@ GameObject:
   - component: {fileID: 1880425323}
   - component: {fileID: 1880425325}
   - component: {fileID: 1880425324}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22954,7 +23070,7 @@ Transform:
   m_GameObject: {fileID: 1924423732}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.041477, y: -89.32181, z: 0.0766094}
+  m_LocalPosition: {x: -36.94, y: -89.27, z: 0.0766094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23363,7 +23479,7 @@ GameObject:
   - component: {fileID: 2081230289}
   - component: {fileID: 2081230291}
   - component: {fileID: 2081230290}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

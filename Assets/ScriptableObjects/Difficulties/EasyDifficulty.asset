@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EasyDifficulty
   m_EditorClassIdentifier: 
   Name: Samaritan
-  PlayerHPMultiplier: 1
+  PlayerHPMultiplier: 1.5
   EnemyHPMultiplier: 0.8
   EnemyDamageMultiplier: 0.8

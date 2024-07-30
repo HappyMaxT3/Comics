@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Superhero
   PlayerHPMultiplier: 0.8
-  EnemyHPMultiplier: 1.5
-  EnemyDamageMultiplier: 1.5
+  EnemyHPMultiplier: 1.2
+  EnemyDamageMultiplier: 1.2

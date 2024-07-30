@@ -8,12 +8,15 @@ namespace Main
     public class Teleport : MonoBehaviour
     {
         public GameObject portal;
-        public Image fadeScreen; 
-        public float fadeDuration;
+        public Image fadeScreen;
+        public float fadeDuration = 1f;
         public List<GameObject> enemies;
+        public float cooldownTime = 3f; 
 
         private GameObject player;
         private Rigidbody2D playerRigidbody;
+        private bool canTeleport = true;
+        private float lastTeleportTime;
 
         void Start()
         {
@@ -32,13 +35,26 @@ namespace Main
             }
         }
 
+        private void Update()
+        {
+            if (!canTeleport)
+            {
+                if (Time.time - lastTeleportTime >= cooldownTime)
+                {
+                    canTeleport = true;
+                }
+            }
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Player"))
+            if (collision.CompareTag("Player") && canTeleport)
             {
                 if (AreAllEnemiesDead())
                 {
                     StartCoroutine(TeleportAndFade());
+                    canTeleport = false;
+                    lastTeleportTime = Time.time; 
                 }
                 else
                 {
@@ -97,10 +113,10 @@ namespace Main
                 var health = enemy.GetComponent<Health>();
                 if (health != null && health.CurrentHealth > 0)
                 {
-                    return false; 
+                    return false;
                 }
             }
-            return true; 
+            return true;
         }
     }
 }
