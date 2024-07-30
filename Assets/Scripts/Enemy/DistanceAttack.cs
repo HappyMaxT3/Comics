@@ -6,14 +6,14 @@ namespace BHSCamp
 {
     public class RangedAttack : AttackBase
     {
-        [SerializeField] private Projectile _projectilePrefab; // Префаб снаряда
-        [SerializeField] private float _projectileSpawnOffset; // Отступ для спавна снаряда
-        [SerializeField] private UnityEngine.Transform _projectileParent; // Родительский трансформ для снарядов
-        [SerializeField] private LayerMask _playerLayerMask; // Маска слоя игрока
-        [SerializeField] private Vector2 _detectionBoxSize; // Размер зоны обнаружения
-        [SerializeField] private float _detectionDistance; // Расстояние для проверки
+        [SerializeField] private Projectile _projectilePrefab; 
+        [SerializeField] private float _projectileSpawnOffset; 
+        [SerializeField] private UnityEngine.Transform _projectileParent;
+        [SerializeField] private LayerMask _playerLayerMask;
+        [SerializeField] private Vector2 _detectionBoxSize; 
+        [SerializeField] private float _detectionDistance; 
         private float _damageMultiplier = 1f;
-        private UnityEngine.Transform _player; // Явное указание пространства имен
+        private UnityEngine.Transform _player;
         private bool _isPlayerDetected = false;
         private bool _isAttacking = false;
 
@@ -42,7 +42,6 @@ namespace BHSCamp
         {
             bool playerDetected = false;
 
-            // Проверяем игрока справа
             Vector2 originRight = new Vector2(transform.position.x + _detectionDistance, transform.position.y);
             RaycastHit2D hitRight = Physics2D.BoxCast(
                 originRight,
@@ -59,7 +58,6 @@ namespace BHSCamp
                 playerDetected = true;
             }
 
-            // Проверяем игрока слева
             Vector2 originLeft = new Vector2(transform.position.x - _detectionDistance, transform.position.y);
             RaycastHit2D hitLeft = Physics2D.BoxCast(
                 originLeft,
@@ -90,18 +88,15 @@ namespace BHSCamp
             base.BeginAttack();
             _animator.SetBool("IsShooting", true);
 
-            // Повернуть врага в сторону игрока
             if (_player != null)
             {
                 Vector3 directionToPlayer = (_player.position - transform.position).normalized;
                 if (Mathf.Abs(directionToPlayer.x) > Mathf.Abs(directionToPlayer.y))
                 {
-                    // Отражаем спрайт в зависимости от направления
                     transform.localScale = new Vector3(Mathf.Sign(directionToPlayer.x), 1, 1);
                 }
                 else
                 {
-                    // Убедиться, что враг не отображается по вертикали
                     transform.localScale = new Vector3(1, 1, 1);
                 }
             }
@@ -112,12 +107,11 @@ namespace BHSCamp
             base.EndAttack();
             _animator.SetBool("IsShooting", false);
 
-            // Создать снаряд, если игрок находится в зоне
             if (_player != null)
             {
                 Debug.Log(_player);
                 Vector3 toTarget = (_player.position - transform.position).normalized;
-                toTarget.y = 0; // Стрелять только по оси X
+                toTarget.y = 0; 
                 Projectile projectile = Instantiate(
                 _projectilePrefab,
                     transform.position + toTarget * _projectileSpawnOffset,

@@ -36,8 +36,6 @@ namespace Main
             _animator.SetFloat("VelocityX", 0);
         }
 
-        //1) ищем направление до след. точки и передвигаемся к ней
-        //2) если дошли до точки, переключаемя на след. и заходим в состояние Idle
         private void Patrol()
         {
             Vector3 toNext = _waypoints[_currentIndex].position - _currentPosition; 

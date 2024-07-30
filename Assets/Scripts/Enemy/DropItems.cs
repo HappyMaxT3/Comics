@@ -4,12 +4,11 @@ namespace Main
 {
     public class DropItemOnDeath : MonoBehaviour
     {
-        [SerializeField] private GameObject _itemPrefab; // Префаб предмета для выпадения
-        [SerializeField] private Transform _projectileParent; // Родительский объект для предмета
-        [SerializeField] private Transform _dropPoint; // Точка для появления предмета
-        [SerializeField] private float _dropForce = 10f; // Сила выброса предмета
-
-        private Health _health; // Ссылка на скрипт Health
+        [SerializeField] private GameObject _itemPrefab; 
+        [SerializeField] private Transform _projectileParent; 
+        [SerializeField] private Transform _dropPoint; 
+        [SerializeField] private float _dropForce = 10f; 
+        private Health _health; 
 
         private void Awake()
         {
@@ -20,7 +19,7 @@ namespace Main
         {
             if (_health != null)
             {
-                _health.OnDeath += HandleDeath; // Подписываемся на событие смерти
+                _health.OnDeath += HandleDeath;
             }
         }
 
@@ -28,7 +27,7 @@ namespace Main
         {
             if (_health != null)
             {
-                _health.OnDeath -= HandleDeath; // Отписываемся от события смерти
+                _health.OnDeath -= HandleDeath; 
             }
         }
 
@@ -45,8 +44,8 @@ namespace Main
                 Rigidbody2D rb = item.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
-                    rb.velocity = Vector2.zero; // Обеспечиваем нулевую скорость перед применением силы
-                    Vector2 direction = UnityEngine.Random.insideUnitCircle.normalized; // Случайное направление
+                    rb.velocity = Vector2.zero; 
+                    Vector2 direction = UnityEngine.Random.insideUnitCircle.normalized;
                     rb.AddForce(direction * _dropForce, ForceMode2D.Impulse);
                 }
             }

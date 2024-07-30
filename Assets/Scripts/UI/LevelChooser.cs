@@ -13,7 +13,7 @@ namespace Main.UI
         [SerializeField] private LevelPreviewData[] _levels;
 
         [Header("UI fields")]
-        [SerializeField] private TMP_Text _descriptionText; // Изменено на TMP_Text
+        [SerializeField] private TMP_Text _descriptionText; 
         [SerializeField] private TMP_Text _nameText;
         [SerializeField] private Button _playButton;
         [SerializeField] private Image _lock;

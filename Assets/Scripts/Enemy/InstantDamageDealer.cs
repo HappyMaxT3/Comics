@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Main
 {
-    // компонент, который наносит урон при касании и откидывает
     [RequireComponent(typeof(Collision2D))]
     public class InstantDamageDealer : MonoBehaviour
     {

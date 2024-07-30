@@ -58,22 +58,20 @@ namespace Main
                 return;
             }
 
-            // –ассчитываем новое положение по оси X, оставл€€ текущее значение по оси Y
             Vector2 targetPosition = new Vector2(_player.position.x, transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, _chaseSpeed * Time.deltaTime);
 
-            // ѕровер€ем рассто€ние до игрока
             float distanceToPlayer = Vector2.Distance(new Vector2(transform.position.x, _player.position.y), _player.position);
 
             if (distanceToPlayer <= _attackRange)
             {
-                // ѕереключаемс€ на состо€ние атаки, если близки к игроку
+
                 _isChasing = false;
                 SwitchToAttackState();
             }
             else if (!PlayerInDetectionRange())
             {
-                // ¬озвращаемс€ к патрулированию, если игрок вышел из зоны обнаружени€
+
                 _isChasing = false;
                 SwitchToPatrolState();
             }

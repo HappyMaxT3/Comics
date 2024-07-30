@@ -8,9 +8,9 @@ namespace Main
     public class Teleport : MonoBehaviour
     {
         public GameObject portal;
-        public Image fadeScreen; // Ссылка на затемняющий экран
-        public float fadeDuration; // Время затемнения и восстановления
-        public List<GameObject> enemies; // Список врагов
+        public Image fadeScreen; 
+        public float fadeDuration;
+        public List<GameObject> enemies;
 
         private GameObject player;
         private Rigidbody2D playerRigidbody;
@@ -97,10 +97,10 @@ namespace Main
                 var health = enemy.GetComponent<Health>();
                 if (health != null && health.CurrentHealth > 0)
                 {
-                    return false; // Один из врагов жив
+                    return false; 
                 }
             }
-            return true; // Все враги мертвы
+            return true; 
         }
     }
 }
