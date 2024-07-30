@@ -503,6 +503,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollingDuration: 0.7
   rollingDistance: 4
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &8712266511654536104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +521,7 @@ MonoBehaviour:
   hitPoint: {fileID: 2860388867688730072}
   attackDamage: 10
   attackRange: 0.7
-  attackSpeed: 10
+  attackSpeed: 3
   _attackAnimationClip: {fileID: 7400000, guid: 539a0fe35d128824ca9cbdd6247c592e, type: 2}
   enemyLayers:
     serializedVersion: 2
@@ -659,7 +662,7 @@ MonoBehaviour:
   _jumpSound: {fileID: 8300000, guid: 7f9ad547000fecf45a238f59cb5991b3, type: 3}
   _attackSound: {fileID: 8300000, guid: 7df6cb4a2e8eda34baff6371afd76194, type: 3}
   _hurtSound: {fileID: 8300000, guid: 8a4316c69ade120419c3df1576a1926c, type: 3}
-  _runSound: {fileID: 8300000, guid: c3edf9f493dadf34d9778e50d9476dff, type: 3}
+  _runSound: {fileID: 8300000, guid: 5939f8f341bda2242b758e84a0421a7f, type: 3}
   _deathSound: {fileID: 8300000, guid: 8a4316c69ade120419c3df1576a1926c, type: 3}
   _rollSound: {fileID: 8300000, guid: 7f9ad547000fecf45a238f59cb5991b3, type: 3}
   _climbSound: {fileID: 8300000, guid: 7f9ad547000fecf45a238f59cb5991b3, type: 3}

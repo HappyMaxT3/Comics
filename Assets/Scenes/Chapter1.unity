@@ -7494,10 +7494,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3789633369398633167, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: enemyLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 4325065272080098551, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.24
@@ -7538,26 +7534,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6361811687732033331, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.6818182
-      objectReference: {fileID: 0}
-    - target: {fileID: 6361811687732033331, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6361811687732033331, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6361811687732033331, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 8460707154566764210, guid: 7d4e71ec1e0b257478c96a00466f877e, type: 3}
-      propertyPath: _runSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 5939f8f341bda2242b758e84a0421a7f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
