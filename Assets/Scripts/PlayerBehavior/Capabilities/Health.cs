@@ -22,6 +22,9 @@ namespace Main
 
         private DeathScreenManager _deathScreenManager;
 
+        // Добавьте слой для разрушаемых объектов
+        [SerializeField] private LayerMask destructibleLayer;
+
         private void Awake()
         {
             _animator = GetComponent<Animator>();
@@ -38,20 +41,44 @@ namespace Main
 
             if (_isDead) return;
 
-            _currentHealth -= amount;
-            _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
-
-            OnDamageTaken?.Invoke(amount);
-            if (_currentHealth == 0)
+            // Проверяем, если объект находится на слое разрушаемых объектов
+            if ((destructibleLayer & (1 << gameObject.layer)) != 0)
             {
-                OnDeath?.Invoke();
-                if (_animator != null)
+                _currentHealth -= amount;
+                _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
+
+                OnDamageTaken?.Invoke(amount);
+                if (_currentHealth <= 0)
                 {
-                    _animator.SetBool("IsDead", true);
+                    OnDeath?.Invoke();
+                    if (_animator != null)
+                    {
+                        _animator.SetBool("IsDead", true);
+                    }
+                    _isDead = true;
+                    DisableCharacterFunctionality();
+                    HandleDeath();
+                    ExplodeTheObject(); 
                 }
-                _isDead = true;
-                DisableCharacterFunctionality();
-                HandleDeath();
+            }
+            else
+            {
+                // Вражеский объект
+                _currentHealth -= amount;
+                _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
+
+                OnDamageTaken?.Invoke(amount);
+                if (_currentHealth <= 0)
+                {
+                    OnDeath?.Invoke();
+                    if (_animator != null)
+                    {
+                        _animator.SetBool("IsDead", true);
+                    }
+                    _isDead = true;
+                    DisableCharacterFunctionality();
+                    HandleDeath();
+                }
             }
         }
 
@@ -81,6 +108,15 @@ namespace Main
             if (_isPlayer && _deathScreenManager != null)
             {
                 _deathScreenManager.ShowDeathScreen();
+            }
+        }
+
+        private void ExplodeTheObject()
+        {
+            var destroyable = GetComponent<Destroying>();
+            if (destroyable != null)
+            {
+                destroyable.ExplodeTheObject();
             }
         }
     }

@@ -549,6 +549,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultMaxHealth: 50
+  destructibleLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1026337983833963084
 MonoBehaviour:
   m_ObjectHideFlags: 0

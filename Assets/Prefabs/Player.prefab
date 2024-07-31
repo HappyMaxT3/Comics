@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 2860388867688730072}
   m_Layer: 3
   m_Name: HitPoint
-  m_TagString: Untagged
+  m_TagString: PlayerHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
   _attackAnimationClip: {fileID: 7400000, guid: 539a0fe35d128824ca9cbdd6247c592e, type: 2}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
 --- !u!114 &2438763498417133249
 MonoBehaviour:
   m_ObjectHideFlags: 0
