@@ -3,6 +3,7 @@ using UnityEngine;
 public class Destroying : MonoBehaviour
 {
     [SerializeField] private GameObject destructablePrefab;
+    [SerializeField] private int health;
 
 
 
@@ -16,9 +17,6 @@ public class Destroying : MonoBehaviour
 
             Destroy(gameObject);
         }
-        else
-        {
-            Debug.LogError("DestructablePrefab is not assigned!");
-        }
+
     }
 }

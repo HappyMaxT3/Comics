@@ -50,14 +50,6 @@ namespace Main
                 OnDamageTaken?.Invoke(amount);
                 if (_currentHealth <= 0)
                 {
-                    OnDeath?.Invoke();
-                    if (_animator != null)
-                    {
-                        _animator.SetBool("IsDead", true);
-                    }
-                    _isDead = true;
-                    DisableCharacterFunctionality();
-                    HandleDeath();
                     ExplodeTheObject(); 
                 }
             }

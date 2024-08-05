@@ -12,7 +12,9 @@ public class DestroyParts : MonoBehaviour
 
         if (rb != null)
         {
-            rb.AddForce(forceDir, ForceMode2D.Impulse); 
+            rb.velocity = Vector2.zero;
+            Vector2 direction = UnityEngine.Random.insideUnitCircle.normalized;
+            rb.AddForce(forceDir * direction, ForceMode2D.Impulse); 
             rb.AddTorque(spin, ForceMode2D.Impulse); 
         }
     }

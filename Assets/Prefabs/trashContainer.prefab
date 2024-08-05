@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -840445894, guid: 6f5d77674fcf9db418ed2ba9ca9a9961, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destructablePrefab: {fileID: 591464567753077886, guid: 77fe07c507c4cf3468ed7ab59dd6bfc3, type: 3}
+  health: 0
 --- !u!114 &2946840668878049337
 MonoBehaviour:
   m_ObjectHideFlags: 0

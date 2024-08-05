@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 441975f150ea1b24c8698e976668cc27
+guid: 9c919ee26b0c44f409b8ccf417cc7dfa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CityPalette1_10
+      name: Police1_0
       rect:
         serializedVersion: 2
-        x: 208
-        y: 404
-        width: 64
-        height: 37
+        x: 15
+        y: 152
+        width: 35
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87477c40887e648468bcc11330b6a3ab
-      internalID: 889103837
+      spriteID: 70d02f2da603dad4cb6fdb064dc5e868
+      internalID: -1670974823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CityPalette1_15
+      name: Police1_1
       rect:
         serializedVersion: 2
-        x: 208
-        y: 356
-        width: 64
-        height: 37
+        x: 64
+        y: 152
+        width: 15
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3536d0be00e9c584fb5fba66551d72b6
-      internalID: 154015153
+      spriteID: add5dc701122f08429587afde84265db
+      internalID: -489416001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CityPalette1_19
+      name: Police1_2
       rect:
         serializedVersion: 2
-        x: 208
-        y: 308
-        width: 64
-        height: 37
+        x: 102
+        y: 152
+        width: 24
+        height: 36
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ae8d53844edee489c85c15b417ab6c
+      internalID: 366782396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Police1_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 88
+        width: 32
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d27cc8112ba196644903bdc969f57ead
-      internalID: 353033529
+      spriteID: 1fab59bfc112a1d40973569497c1f9af
+      internalID: -1462709536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CityPalette1_0
+      name: Police1_4
       rect:
         serializedVersion: 2
-        x: 367
-        y: 260
-        width: 128
-        height: 14
+        x: 111
+        y: 56
+        width: 58
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,50 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1406ccb2aec1f649b24e4dede62078d
-      internalID: -2037084004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CityPalette1_1
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 316
-        width: 128
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7732466cf816d384a815261ccde91783
-      internalID: 1712125891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CityPalette1_2
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 388
-        width: 81
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54f819a8d0b9a9549ba77b551daba35f
-      internalID: -1111274563
+      spriteID: 88f2daaad98dbc34fa96561b97012998
+      internalID: -7351489
       vertices: []
       indices: 
       edges: []
@@ -246,33 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CityPalette1_0: -2037084004
-      CityPalette1_1: 1712125891
-      CityPalette1_10: 889103837
-      CityPalette1_11: -1494379064
-      CityPalette1_12: -1832769416
-      CityPalette1_13: 879985157
-      CityPalette1_14: -1579184355
-      CityPalette1_15: 154015153
-      CityPalette1_16: 307200618
-      CityPalette1_17: -255209453
-      CityPalette1_18: -1452944232
-      CityPalette1_19: 353033529
-      CityPalette1_2: -1111274563
-      CityPalette1_20: -926354132
-      CityPalette1_21: -800887058
-      CityPalette1_22: 167228197
-      CityPalette1_23: 514372709
-      CityPalette1_24: 1101707455
-      CityPalette1_25: -410758353
-      CityPalette1_26: 408558289
-      CityPalette1_3: -669947558
-      CityPalette1_4: 830771281
-      CityPalette1_5: -468821015
-      CityPalette1_6: -222293755
-      CityPalette1_7: 581649774
-      CityPalette1_8: -1405297880
-      CityPalette1_9: -944940379
+      Police1_0: -1670974823
+      Police1_1: -489416001
+      Police1_2: 366782396
+      Police1_3: -1462709536
+      Police1_4: -7351489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
