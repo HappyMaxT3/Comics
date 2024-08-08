@@ -56,10 +56,6 @@ namespace Main
                     canTeleport = false;
                     lastTeleportTime = Time.time; 
                 }
-                else
-                {
-                    Debug.Log("Not all enemies are dead.");
-                }
             }
         }
 
